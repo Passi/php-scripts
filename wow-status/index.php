@@ -8,13 +8,13 @@ while($sql = mysql_fetch_array($sqls)) {
 if (! $sock = @fsockopen($sql["address"], $sql["port"], $num, $error, 3))
 echo '<table width=\"100%\" border=0 cellspacing=0 cellpadding=3>
   <tr>
-    <td align=\"left\" valign=\"left\"><font color="#'.$coffline.'"><b>'.$sql["name"].'</td><td align=\"right\" valign=\"right\"><img src="offlineS.png"></td>
+    <td align=\"left\" valign=\"left\"><font color="#'.$coffline.'"><b>'.$sql["name"].'</td><td align=\"right\" valign=\"right\"><img src="'.$ioffline.'"></td>
 
   </td></tr>'; 
 else{ 
 echo '<table width=\"100%\" border=0 cellspacing=0 cellpadding=3>
   <tr>
-    <td align=\"left\" valign=\"left\"><font color="#'.$conline.'"><b>'.$sql["name"].'</td><td align=\"right\" valign=\"right\"><img src="onlineS.png"></td>
+    <td align=\"left\" valign=\"left\"><font color="#'.$conline.'"><b>'.$sql["name"].'</td><td align=\"right\" valign=\"right\"><img src="'.$ionline.'"></td>
   </td></tr>'; 
 fclose($sock);
 } 
@@ -23,12 +23,12 @@ if (! $sock = @fsockopen($ip, $port, $num, $error, 3))
 echo '<table width=\"100%\" border=0 cellspacing=0 cellpadding=3>
   <tr>
     <td align=\"left\" valign=\"middle\"></td>
-  <td align=\"left\" valign=\"left\"><font color="#'.$coffline.'"><b>Login</td><td align=\"right\" valign=\"right\"><img src="offlineS.png"></td>
+  <td align=\"left\" valign=\"left\"><font color="#'.$coffline.'"><b>Login</td><td align=\"right\" valign=\"right\"><img src="'.$ioffline.'"></td>
 '; 
 else{ 
 echo '<table width=\"100%\" border=0 cellspacing=0 cellpadding=3>
   <tr>
-    <td align=\"left\" valign=\"left\"><font color="#'.$conline.'"><b>Login</td><td align=\"right\" valign=\"right\"><img src="onlineS.png"></td>
+    <td align=\"left\" valign=\"left\"><font color="#'.$conline.'"><b>Login</td><td align=\"right\" valign=\"right\"><img src="'.$ionline.'"></td>
 
   </tr></table>'; 
 fclose($sock);
